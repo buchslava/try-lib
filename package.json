@@ -1,0 +1,61 @@
+{
+  "name": "try-lib",
+  "version": "1.0.0",
+  "description": "TryLib",
+  "author": "Vyacheslav Chub <vyacheslav.chub@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/buchslava/try-lib/issues"
+  },
+  "homepage": "https://github.com/buchslava/try-lib#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buchslava/try-lib.git"
+  },
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "yarn rimraf lib",
+    "build": "yarn build:js && yarn build:dts",
+    "build:js": "yarn rollup --config ./rollup.config.js",
+    "build:dts": "tsc -d",
+    "prepublish": "yarn build"
+  },
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.10",
+    "@babel/preset-env": "7.12.11",
+    "@babel/preset-typescript": "7.12.7",
+    "@changesets/cli": "^2.12.0",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@typescript-eslint/eslint-plugin": "4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "autoprefixer": "^10.1.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-rename-import": "^2.3.0",
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-import-resolver-typescript": "2.3.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-mocha": "^8.0.0",
+    "eslint-plugin-no-only-tests": "^2.4.0",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "lint-staged": "^10.5.3",
+    "matched": "^5.0.1",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.35.1",
+    "ts-node": "9.1.1",
+    "typescript": "4.1.2"
+  }
+}
